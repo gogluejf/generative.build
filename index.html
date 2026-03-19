@@ -310,11 +310,11 @@
     position: relative; overflow: hidden;
   }
   .origin-inner::after {
-    content: '2024';
-    font-family: var(--font-display); font-size: 180px; font-weight: 800;
+    content: 'Generative';
+    font-family: var(--font-display); font-size: 120px; font-weight: 800;
     color: rgba(26,200,200,0.05); position: absolute;
-    right: -20px; bottom: -40px; line-height: 1; pointer-events: none;
-    letter-spacing: -0.06em;
+    right: 20px; bottom: -20px; line-height: 1; pointer-events: none;
+    letter-spacing: -0.06em; white-space: nowrap;
   }
   .origin-quote {
     font-family: var(--font-display); font-size: clamp(20px, 2.5vw, 26px);
@@ -580,7 +580,7 @@
     .speakers-grid { grid-template-columns: 1fr; }
     .board-grid { grid-template-columns: 1fr 1fr; }
     .origin-inner { padding: 40px 28px; }
-    .origin-inner::after { font-size: 100px; }
+    .origin-inner::after { font-size: 60px; right: 0; bottom: 0; }
     section { padding: 70px 0; }
   }
   @media (max-width: 520px) {
@@ -744,13 +744,13 @@
     <h2 class="section-title reveal"><span data-en>Born from a conviction, not a trend</span><span data-fr>Né d'une conviction, pas d'une tendance</span></h2>
     <div class="origin-inner reveal">
       <p class="origin-quote">
-        <span data-en>In 2024, I launched GenAI Montreal with a simple idea: to create a space to share experiments and insights on the emerging wave of generative AI.</span>
-        <span data-fr>En 2024, j’ai lancé GenAI Montréal avec une idée simple : créer un espace pour partager, avec mes pairs, ce que je voyais émerger et les expérimentations que je menais autour de cette nouvelle vague qu’est l’IA générative.</span>
+        <span data-en>In 2024, I launched Generative Build Foundation with a simple idea: to create a space to share experiments and insights on the emerging wave of generative AI.</span>
+        <span data-fr>En 2024, j’ai lancé la Fondation Generative Build avec une idée simple : créer un espace pour partager, avec mes pairs, ce que je voyais émerger et les expérimentations que je menais autour de cette nouvelle vague qu’est l’IA générative.</span>
       </p>
       <div class="origin-author">
-        <img src="./assets/farid.png" alt="Farid" class="origin-avatar" />
+        <img src="./assets/farid.png" alt="Farid Bellameche" class="origin-avatar" />
         <div>
-          <div class="origin-author-name">Farid</div>
+          <div class="origin-author-name">Farid Bellameche</div>
           <div class="origin-author-role"><span data-en>Founder</span><span data-fr>Fondateur</span></div>
         </div>
       </div>
@@ -901,10 +901,10 @@
       <a href="https://www.linkedin.com/in/farid-bellameche-6606332/" target="_blank" rel="noopener noreferrer" class="board-card">
         <div class="avatar-wrap" style="text-align:center;">
           <div class="board-avatar">
-            <img src="./assets/farid.png" alt="Farid" style="width: 100%; height: 100%; object-fit: cover;" />
+            <img src="./assets/farid.png" alt="Farid Bellameche" style="width: 100%; height: 100%; object-fit: cover;" />
           </div>
         </div>
-        <div class="board-name">Farid <img src="./assets/ln.png" alt="LinkedIn" class="ln-icon" /></div>
+        <div class="board-name">Farid Bellameche <img src="./assets/ln.png" alt="LinkedIn" class="ln-icon" /></div>
         <div class="board-title"><span data-en>President</span><span data-fr>Président</span> · generative.build</div>
         <p class="board-bio"><span data-en>30 years in tech, 15 AI keynotes. Helps organizations navigate the AI landscape with clarity and strategic intent.</span><span data-fr>30 ans dans la tech, 15 conférences (keynotes) sur l'IA. Aide les organisations à naviguer dans le paysage de l'IA avec clarté et intention stratégique.</span></p>
       </a>
@@ -923,10 +923,10 @@
       <a href="https://www.linkedin.com/in/renejf/" target="_blank" rel="noopener noreferrer" class="board-card">
         <div class="avatar-wrap" style="text-align:center;">
           <div class="board-avatar">
-            <img src="./assets/jf-rene.png" alt="JF René" style="width: 100%; height: 100%; object-fit: cover;" />
+            <img src="./assets/jf-rene.png" alt="Jean-Francois René" style="width: 100%; height: 100%; object-fit: cover;" />
           </div>
         </div>
-        <div class="board-name">JF René <img src="./assets/ln.png" alt="LinkedIn" class="ln-icon" /></div>
+        <div class="board-name">Jean-Francois René <img src="./assets/ln.png" alt="LinkedIn" class="ln-icon" /></div>
         <div class="board-title"><span data-en>Board Member</span><span data-fr>Membre du Conseil</span></div>
         <p class="board-bio"><span data-en>Former CTO at ScalePad. Founder and platform engineering leader helping businesses scale operations with AI systems.</span><span data-fr>Ancien CTO chez ScalePad. Fondateur et leader en ingénierie de plateformes aidant les entreprises à faire évoluer leurs opérations avec des systèmes d'IA.</span></p>
       </a>
