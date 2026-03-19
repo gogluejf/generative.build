@@ -327,8 +327,26 @@
     line-height: 0; position: absolute; top: 10px; left: -30px;
     font-family: Georgia, serif;
   }
+  .origin-author {
+    display: flex; align-items: center; gap: 16px;
+    margin-top: 28px; position: relative; z-index: 1;
+  }
+  .origin-avatar {
+    width: 56px; height: 56px; border-radius: 50%;
+    border: 2px solid rgba(26,200,200,0.35);
+    object-fit: cover;
+  }
+  .origin-author-name {
+    font-family: var(--font-display); font-size: 16px; font-weight: 800;
+    color: var(--white); margin-bottom: 2px;
+  }
+  .origin-author-role {
+    font-family: var(--font-mono); font-size: 12px; color: var(--teal);
+    letter-spacing: 0.04em;
+  }
   .origin-caption {
-    margin-top: 32px; color: var(--muted); font-size: 15px;
+    margin-top: 36px; padding-top: 32px; border-top: 1px solid var(--border-bright);
+    color: var(--muted); font-size: 15px;
     line-height: 1.75; max-width: 620px; position: relative; z-index: 1;
   }
 
@@ -729,6 +747,13 @@
         <span data-en>In 2024, I launched GenAI Montreal with a simple idea: to create a space to share experiments and insights on the emerging wave of generative AI.</span>
         <span data-fr>En 2024, j’ai lancé GenAI Montréal avec une idée simple : créer un espace pour partager, avec mes pairs, ce que je voyais émerger et les expérimentations que je menais autour de cette nouvelle vague qu’est l’IA générative.</span>
       </p>
+      <div class="origin-author">
+        <img src="./assets/farid.png" alt="Farid" class="origin-avatar" />
+        <div>
+          <div class="origin-author-name">Farid</div>
+          <div class="origin-author-role"><span data-en>Founder</span><span data-fr>Fondateur</span></div>
+        </div>
+      </div>
       <p class="origin-caption">
         <span data-en>Our founder Farid simply wanted to open the conversation here in Montréal. With early support from Jean-François René, who hosted the very first event at Scalepad, the initiative quickly took root.
         <br/><br/>
@@ -953,7 +978,7 @@
     <div class="footer-inner">
       <div class="footer-logo">
         <img src="./assets/logo-shape.png" alt="generative.build"/>
-        <span class="footer-copy"><span data-en>© 2025 Generative Build Foundation</span><span data-fr>© 2025 Fondation Generative Build</span></span>
+        <span class="footer-copy"><span data-en>© 2026 Generative Build Foundation</span><span data-fr>© 2025 Fondation Generative Build</span></span>
       </div>
       <div class="footer-links">
         <a href="#mission"><span data-en>Mission</span><span data-fr>Mission</span></a>
