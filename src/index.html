@@ -8,6 +8,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"/>
 <style>
+  html[lang="en"] [data-fr] { display: none !important; }
+  html[lang="fr"] [data-en] { display: none !important; }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
@@ -81,6 +83,14 @@
   }
   .nav-cta:hover { background: #0ec5c5 !important; color: var(--bg) !important; }
 
+  .nav-btn-lang {
+    background: transparent; border: 1px solid var(--border-bright);
+    color: var(--white); font-family: var(--font-mono); font-size: 13px;
+    padding: 6px 12px; border-radius: 6px; cursor: pointer;
+    transition: background .2s; margin-left: 12px;
+  }
+  .nav-btn-lang:hover { background: rgba(255,255,255,0.1); }
+  
   /* ── SECTION SCAFFOLDING ── */
   section { padding: 100px 0; }
   .container { max-width: 1060px; margin: 0 auto; padding: 0 32px; }
@@ -607,12 +617,13 @@
     <img src="./assets/logo-dark.png" alt="generative.build"/>
   </a>
   <div class="nav-links">
-    <a href="#mission">Mission</a>
-    <a href="#values">Values</a>
-    <a href="#speakers">Speakers</a>
-    <a href="#board">Team</a>
-    <a href="#roadmap">Roadmap</a>
-    <a href="mailto:faridautomatic@gmail.com" class="nav-cta">Join Us</a>
+    <a href="#mission"><span data-en>Mission</span><span data-fr>Mission</span></a>
+    <a href="#values"><span data-en>Values</span><span data-fr>Valeurs</span></a>
+    <a href="#speakers"><span data-en>Speakers</span><span data-fr>Conférenciers</span></a>
+    <a href="#board"><span data-en>Team</span><span data-fr>Équipe</span></a>
+    <a href="#roadmap"><span data-en>Roadmap</span><span data-fr>Feuille de route</span></a>
+    <a href="mailto:faridautomatic@gmail.com" class="nav-cta"><span data-en>Join Us</span><span data-fr>Rejoignez-nous</span></a>
+    <button id="lang-toggle" class="nav-btn-lang">FR</button>
   </div>
 </nav>
 
@@ -625,21 +636,21 @@
   <div class="container">
     <div class="hero-inner">
       <div class="hero-badge">
-        <span></span> Montreal · Community · Non-Profit
+        <span></span> <span data-en>Montreal · Community · Non-Profit</span><span data-fr>Montréal · Communauté · OBNL</span>
       </div>
       <h1 class="hero-title">
-        Where <em>Builders</em><br/>
-        Shape the <span class="accent">AI</span> Era
+        <span data-en>Where <em>Builders</em><br/>Shape the <span class="accent">AI</span> Era</span>
+        <span data-fr>Où les <em>Bâtisseurs</em><br/>Façonnent l'Ère de <span class="accent">l'IA</span></span>
       </h1>
       <p class="hero-sub">
-        A non-profit community of engineers, founders, and practitioners
-        building AI that creates genuine value — for people, organizations, and society.
+        <span data-en>A non-profit community of engineers, founders, and practitioners building AI that creates genuine value — for people, organizations, and society.</span>
+        <span data-fr>Une communauté à but non lucratif d'ingénieurs, de fondateurs et de praticiens construisant une IA qui crée une véritable valeur — pour les individus, les organisations et la société.</span>
       </p>
       <div class="hero-actions">
-        <a href="#mission" class="btn-primary">Explore our mission</a>
-        <a href="#speakers" class="btn-ghost">See our speakers</a>
+        <a href="#mission" class="btn-primary"><span data-en>Explore our mission</span><span data-fr>Découvrir notre mission</span></a>
+        <a href="#speakers" class="btn-ghost"><span data-en>See our speakers</span><span data-fr>Voir nos conférenciers</span></a>
       </div>
-      <div class="hero-scroll">scroll to explore</div>
+      <div class="hero-scroll"><span data-en>scroll to explore</span><span data-fr>défiler pour explorer</span></div>
     </div>
   </div>
 </section>
@@ -651,23 +662,22 @@
   <div class="container">
     <div class="mission-layout">
       <div>
-        <div class="section-eyebrow">Our Mission</div>
+        <div class="section-eyebrow"><span data-en>Our Mission</span><span data-fr>Notre Mission</span></div>
         <h2 class="mission-statement">
-          A community of builders creating AI that generates
-          <span class="hl">real value</span> for people, organizations and society.
+          <span data-en>A community of builders creating AI that generates <span class="hl">real value</span> for people, organizations and society.</span>
+          <span data-fr>Une communauté de bâtisseurs créant une IA qui génère une <span class="hl">valeur réelle</span> pour les personnes, les organisations et la société.</span>
         </h2>
       </div>
       <div class="mission-right">
-        <div class="mission-tag">NPO · Montréal</div>
+        <div class="mission-tag"><span data-en>NPO · Montréal</span><span data-fr>OBNL · Montréal</span></div>
         <p>
-          generative.build is not a conference series or a Slack group. It's an operating system
-          for the builders who believe AI must earn its place through impact — not hype.
+          <span data-en>generative.build is not a conference series or a Slack group. It's an operating system for the builders who believe AI must earn its place through impact — not hype.</span>
+          <span data-fr>generative.build n'est pas une série de conférences ou un groupe Slack. C'est un système d'exploitation pour les bâtisseurs qui croient que l'IA doit gagner sa place par son impact — et non par le battage médiatique (hype).</span>
         </p>
         <br/>
         <p>
-          We connect practitioners doing real work: sharing code, failures, lessons, and prototypes.
-          Every event, conversation, and collaboration returns to a single standard —
-          <strong style="color:var(--white)">does this create real benefit?</strong>
+          <span data-en>We connect practitioners doing real work: sharing code, failures, lessons, and prototypes. Every event, conversation, and collaboration returns to a single standard — <strong style="color:var(--white)">does this create real benefit?</strong></span>
+          <span data-fr>Nous connectons des praticiens qui font un travail réel : partager du code, des échecs, des leçons et des prototypes. Chaque événement, conversation et collaboration ramène à une seule exigence — <strong style="color:var(--white)">est-ce que cela crée un bénéfice réel ?</strong></span>
         </p>
       </div>
     </div>
@@ -679,29 +689,29 @@
 <!-- VALUES -->
 <section id="values">
   <div class="container">
-    <div class="section-eyebrow reveal">Core Values</div>
-    <h2 class="section-title reveal">What we stand for</h2>
-    <p class="section-body reveal">Four principles that govern every decision, event, and collaboration in this community.</p>
+    <div class="section-eyebrow reveal"><span data-en>Core Values</span><span data-fr>Valeurs Fondamentales</span></div>
+    <h2 class="section-title reveal"><span data-en>What we stand for</span><span data-fr>Ce que nous défendons</span></h2>
+    <p class="section-body reveal"><span data-en>Four principles that govern every decision, event, and collaboration in this community.</span><span data-fr>Quatre principes qui régissent chaque décision, événement et collaboration au sein de cette communauté.</span></p>
     <div class="values-grid stagger-children reveal">
       <div class="value-card">
         <div class="value-icon"><img src="./assets/human.png" alt="Human at the Core" /></div>
-        <div class="value-name">Human at the Core</div>
-        <p class="value-desc">AI must serve people first. We promote ethical, responsible systems that improve well-being, opportunity, and dignity. Technology is not the goal — human progress is.</p>
+        <div class="value-name"><span data-en>Human at the Core</span><span data-fr>L'Humain au Centre</span></div>
+        <p class="value-desc"><span data-en>AI must serve people first. We promote ethical, responsible systems that improve well-being, opportunity, and dignity. Technology is not the goal — human progress is.</span><span data-fr>L'IA doit d'abord servir les gens. Nous promouvons des systèmes éthiques et responsables qui améliorent le bien-être, les opportunités et la dignité. La technologie n'est pas le but — le progrès humain l'est.</span></p>
       </div>
       <div class="value-card">
         <div class="value-icon"><img src="./assets/take-give.png" alt="Take and Give" /></div>
-        <div class="value-name">Take and Give</div>
-        <p class="value-desc">This is a participatory community. Everyone learns and contributes back. Share knowledge, ideas, tools, and experience — the network strengthens when members help each other grow.</p>
+        <div class="value-name"><span data-en>Take and Give</span><span data-fr>Recevoir et Donner</span></div>
+        <p class="value-desc"><span data-en>This is a participatory community. Everyone learns and contributes back. Share knowledge, ideas, tools, and experience — the network strengthens when members help each other grow.</span><span data-fr>C'est une communauté participative. Chacun apprend et redonne. Partagez vos connaissances, idées, outils et expériences — le réseau se renforce quand les membres s'entraident pour grandir.</span></p>
       </div>
       <div class="value-card">
         <div class="value-icon"><img src="./assets/builder.png" alt="Tangible Builders" /></div>
-        <div class="value-name">Tangible Builders</div>
-        <p class="value-desc">We value builders who turn ideas into real outcomes. Experimentation, prototypes, and working systems over theory and hype. Show what you build, share what you learn.</p>
+        <div class="value-name"><span data-en>Tangible Builders</span><span data-fr>Bâtisseurs Concrets</span></div>
+        <p class="value-desc"><span data-en>We value builders who turn ideas into real outcomes. Experimentation, prototypes, and working systems over theory and hype. Show what you build, share what you learn.</span><span data-fr>Nous valorisons les bâtisseurs qui transforment des idées en résultats. L'expérimentation, les prototypes et les systèmes fonctionnels priment sur la théorie et le battage médiatique. Montrez ce que vous construisez, partagez ce que vous apprenez.</span></p>
       </div>
       <div class="value-card">
         <div class="value-icon"><img src="./assets/roadmap.png" alt="Values-Driven Roadmap" /></div>
-        <div class="value-name">Values-Driven Roadmap</div>
-        <p class="value-desc">Our direction follows our mission, not external influence. Sponsors support the ecosystem — they don't control the agenda. Decisions stay guided by our core values.</p>
+        <div class="value-name"><span data-en>Values-Driven Roadmap</span><span data-fr>Feuille de Route Guidée par les Valeurs</span></div>
+        <p class="value-desc"><span data-en>Our direction follows our mission, not external influence. Sponsors support the ecosystem — they don't control the agenda. Decisions stay guided by our core values.</span><span data-fr>Notre direction suit notre mission, pas les influences externes. Les commanditaires soutiennent l'écosystème — ils ne contrôlent pas l'agenda. Les décisions restent guidées par nos valeurs fondamentales.</span></p>
       </div>
     </div>
   </div>
@@ -712,16 +722,20 @@
 <!-- ORIGIN -->
 <section id="origin">
   <div class="container">
-    <div class="section-eyebrow reveal">Why We Started</div>
-    <h2 class="section-title reveal">Born from a conviction, not a trend</h2>
+    <div class="section-eyebrow reveal"><span data-en>Why We Started</span><span data-fr>Pourquoi Nous Avons Commencé</span></div>
+    <h2 class="section-title reveal"><span data-en>Born from a conviction, not a trend</span><span data-fr>Né d'une conviction, pas d'une tendance</span></h2>
     <div class="origin-inner reveal">
       <p class="origin-quote">
-        In 2024, I launched GenAI Montreal with a simple idea: to create a space to share experiments and insights on the emerging wave of generative AI.
+        <span data-en>In 2024, I launched GenAI Montreal with a simple idea: to create a space to share experiments and insights on the emerging wave of generative AI.</span>
+        <span data-fr>En 2024, j’ai lancé GenAI Montréal avec une idée simple : créer un espace pour partager, avec mes pairs, ce que je voyais émerger et les expérimentations que je menais autour de cette nouvelle vague qu’est l’IA générative.</span>
       </p>
       <p class="origin-caption">
-        Our founder Farid simply wanted to open the conversation here in Montréal. With early support from Jean-François René, who hosted the very first event at Scalepad, the initiative quickly took root.
+        <span data-en>Our founder Farid simply wanted to open the conversation here in Montréal. With early support from Jean-François René, who hosted the very first event at Scalepad, the initiative quickly took root.
         <br/><br/>
-        Today, it has grown into a community of over 1,300 people. What started as an urge to share has become a movement of builders, practitioners, and leaders developing AI that is useful, concrete, and deeply human — putting Montréal on the generative AI map and shaping conversations with key decision-makers.
+        Today, it has grown into a community of over 1,300 people. What started as an urge to share has become a movement of builders, practitioners, and leaders developing AI that is useful, concrete, and deeply human — putting Montréal on the generative AI map and shaping conversations with key decision-makers.</span>
+        <span data-fr>Au tout début, je n’avais pas vraiment de tribune, mais j’avais la conviction qu’il fallait ouvrir la conversation ici, à Montréal. Dès les premiers pas, Jean-François René a cru au projet et a accueilli notre tout premier événement chez Scalepad.
+        <br/><br/>
+        Aujourd’hui, cette initiative est devenue une communauté de plus de 1300 personnes. Ce qui était au départ un élan de partage est devenu un véritable mouvement de bâtisseurs, de praticiens et de leaders qui veulent développer une IA utile, concrète et profondément humaine. Mon ambition était de mettre Montréal sur la map de l’IA générative — et la croissance de la communauté, ainsi que les échanges que nous avons maintenant avec des décideurs, montrent que cette vision prend vie.</span>
       </p>
     </div>
   </div>
@@ -732,31 +746,31 @@
 <!-- IMPACT STATS -->
 <section id="impact">
   <div class="container">
-    <div class="section-eyebrow reveal">Momentum</div>
-    <h2 class="section-title reveal">Building in public since 2024</h2>
+    <div class="section-eyebrow reveal"><span data-en>Momentum</span><span data-fr>Momentum</span></div>
+    <h2 class="section-title reveal"><span data-en>Building in public since 2024</span><span data-fr>Bâtir en public depuis 2024</span></h2>
     <div class="stats-grid stagger-children reveal">
       <div class="stat-card">
         <div class="stat-num" data-target="20" data-suffix="+">0+</div>
-        <div class="stat-label">Events</div>
-        <div class="stat-tagline">Speaker-led, practitioner-focused</div>
+        <div class="stat-label"><span data-en>Events</span><span data-fr>Événements</span></div>
+        <div class="stat-tagline"><span data-en>Speaker-led, practitioner-focused</span><span data-fr>Menés par des conférenciers, axés sur la pratique</span></div>
         <div class="count-bar"></div>
       </div>
       <div class="stat-card">
         <div class="stat-num" data-target="15" data-suffix="+">0+</div>
-        <div class="stat-label">Host Companies</div>
-        <div class="stat-tagline">Organizations opening their doors</div>
+        <div class="stat-label"><span data-en>Host Companies</span><span data-fr>Entreprises Hôtes</span></div>
+        <div class="stat-tagline"><span data-en>Organizations opening their doors</span><span data-fr>Des organisations qui ouvrent leurs portes</span></div>
         <div class="count-bar"></div>
       </div>
       <div class="stat-card">
         <div class="stat-num" data-target="1300" data-suffix="+">0+</div>
-        <div class="stat-label">Members</div>
-        <div class="stat-tagline">Builders, founders &amp; researchers</div>
+        <div class="stat-label"><span data-en>Members</span><span data-fr>Membres</span></div>
+        <div class="stat-tagline"><span data-en>Builders, founders &amp; researchers</span><span data-fr>Bâtisseurs, fondateurs et chercheurs</span></div>
         <div class="count-bar"></div>
       </div>
       <div class="stat-card">
         <div class="stat-num" data-target="25" data-suffix="+">0+</div>
-        <div class="stat-label">Speakers</div>
-        <div class="stat-tagline">Real expertise, no fluff</div>
+        <div class="stat-label"><span data-en>Speakers</span><span data-fr>Conférenciers</span></div>
+        <div class="stat-tagline"><span data-en>Real expertise, no fluff</span><span data-fr>Une véritable expertise, sans artifice</span></div>
         <div class="count-bar"></div>
       </div>
     </div>
@@ -768,9 +782,9 @@
 <!-- SPEAKERS -->
 <section id="speakers">
   <div class="container">
-    <div class="section-eyebrow reveal">Recent Speakers</div>
-    <h2 class="section-title reveal">People who ship, then share</h2>
-    <p class="section-body reveal">Practitioners with real production experience — not slides about AI, but the real stories behind building it.</p>
+    <div class="section-eyebrow reveal"><span data-en>Recent Speakers</span><span data-fr>Conférenciers Récents</span></div>
+    <h2 class="section-title reveal"><span data-en>People who ship, then share</span><span data-fr>Des gens qui livrent, puis partagent</span></h2>
+    <p class="section-body reveal"><span data-en>Practitioners with real production experience — not slides about AI, but the real stories behind building it.</span><span data-fr>Des praticiens avec une réelle expérience de production — pas de présentations théoriques sur l'IA, mais les vraies histoires derrière sa construction.</span></p>
     <div class="speakers-grid stagger-children reveal">
 
       <!-- Speaker 1 -->
@@ -782,7 +796,7 @@
         </div>
         <div class="speaker-name">Michael Masson <img src="./assets/ln.png" alt="LinkedIn" class="ln-icon" /></div>
         <div class="speaker-role">CTO · Botpress</div>
-        <p class="speaker-bio">Architect of one of the world's leading AI agent platforms — enabling production-grade LLM-powered chatbots and agents at scale.</p>
+        <p class="speaker-bio"><span data-en>Architect of one of the world's leading AI agent platforms — enabling production-grade LLM-powered chatbots and agents at scale.</span><span data-fr>Architecte de l'une des principales plateformes d'agents IA au monde — permettant la création de chatbots et d'agents alimentés par des LLM à grande échelle et de niveau production.</span></p>
       </a>
 
       <!-- Speaker 2 -->
@@ -793,8 +807,8 @@
           </div>
         </div>
         <div class="speaker-name">Morgan Willis <img src="./assets/ln.png" alt="LinkedIn" class="ln-icon" /></div>
-        <div class="speaker-role">Developer Advocate · AWS</div>
-        <p class="speaker-bio">15+ years in cloud and software engineering, helping developers adopt AWS services through hands-on demos and real-world architectures.</p>
+        <div class="speaker-role"><span data-en>Developer Advocate</span><span data-fr>Avocate pour les développeurs</span> · AWS</div>
+        <p class="speaker-bio"><span data-en>15+ years in cloud and software engineering, helping developers adopt AWS services through hands-on demos and real-world architectures.</span><span data-fr>Plus de 15 ans en cloud et ingénierie logicielle, aidant les développeurs à adopter les services AWS grâce à des démonstrations pratiques et des architectures du monde réel.</span></p>
       </a>
 
       <!-- Speaker 3 -->
@@ -805,8 +819,8 @@
           </div>
         </div>
         <div class="speaker-name">Alexandre Bourget <img src="./assets/ln.png" alt="LinkedIn" class="ln-icon" /></div>
-        <div class="speaker-role">Co-Founder & CTO · Aviron AI</div>
-        <p class="speaker-bio">Full-stack tech entrepreneur, international speaker, and chief architect of the StreamingFast suite. Co-founder of multiple successful startups.</p>
+        <div class="speaker-role"><span data-en>Co-Founder & CTO</span><span data-fr>Co-fondateur et CTO</span> · Aviron AI</div>
+        <p class="speaker-bio"><span data-en>Full-stack tech entrepreneur, international speaker, and chief architect of the StreamingFast suite. Co-founder of multiple successful startups.</span><span data-fr>Entrepreneur tech full-stack, conférencier international et architecte en chef de la suite StreamingFast. Co-fondateur de multiples startups à succès.</span></p>
       </a>
 
       <!-- Speaker 4 -->
@@ -817,8 +831,8 @@
           </div>
         </div>
         <div class="speaker-name">Philippe Habra <img src="./assets/ln.png" alt="LinkedIn" class="ln-icon" /></div>
-        <div class="speaker-role">Founder · Just Better AI</div>
-        <p class="speaker-bio">Engineer turned founder — launched three data and AI startups, and now builds tools that make AI a practical force multiplier for every business.</p>
+        <div class="speaker-role"><span data-en>Founder</span><span data-fr>Fondateur</span> · Just Better AI</div>
+        <p class="speaker-bio"><span data-en>Engineer turned founder — launched three data and AI startups, and now builds tools that make AI a practical force multiplier for every business.</span><span data-fr>Ingénieur devenu fondateur — a lancé trois startups en données et IA, et construit maintenant des outils qui font de l'IA un véritable multiplicateur de force pratique pour chaque entreprise.</span></p>
       </a>
 
       <!-- Speaker 5 -->
@@ -829,8 +843,8 @@
           </div>
         </div>
         <div class="speaker-name">Andreas Ortega <img src="./assets/ln.png" alt="LinkedIn" class="ln-icon" /></div>
-        <div class="speaker-role">Founder · AI Runtime Security</div>
-        <p class="speaker-bio">Staff engineer turned founder, building runtime observability and security for AI agents — making intelligent systems safer in production.</p>
+        <div class="speaker-role"><span data-en>Founder</span><span data-fr>Fondateur</span> · AI Runtime Security</div>
+        <p class="speaker-bio"><span data-en>Staff engineer turned founder, building runtime observability and security for AI agents — making intelligent systems safer in production.</span><span data-fr>Ingénieur principal devenu fondateur, développant l'observabilité et la sécurité d'exécution pour les agents IA — rendant les systèmes intelligents plus sûrs en production.</span></p>
       </a>
 
       <!-- Speaker 6 -->
@@ -841,8 +855,8 @@
           </div>
         </div>
         <div class="speaker-name">Nicholas Nadeau, Ph.D. <img src="./assets/ln.png" alt="LinkedIn" class="ln-icon" /></div>
-        <div class="speaker-role">Co-Founder & CTO · Onix</div>
-        <p class="speaker-bio">Human-robot interaction PhD. Former humanoid robotics lead at 1X. Now building personal AI — focused on individual intelligence, not generic models.</p>
+        <div class="speaker-role"><span data-en>Co-Founder & CTO</span><span data-fr>Co-fondateur et CTO</span> · Onix</div>
+        <p class="speaker-bio"><span data-en>Human-robot interaction PhD. Former humanoid robotics lead at 1X. Now building personal AI — focused on individual intelligence, not generic models.</span><span data-fr>Doctorat en interaction humain-robot. Ancien responsable de la robotique humanoïde chez 1X. Construit maintenant une IA personnelle — axée sur l'intelligence individuelle, et non sur des modèles génériques.</span></p>
       </a>
 
     </div>
@@ -854,9 +868,9 @@
 <!-- BOARD -->
 <section id="board">
   <div class="container">
-    <div class="section-eyebrow reveal">Leadership</div>
-    <h2 class="section-title reveal">The team behind the initiative</h2>
-    <p class="section-body reveal">Practitioners with decades of combined experience, united by a commitment to ethical, impactful AI.</p>
+    <div class="section-eyebrow reveal"><span data-en>Leadership</span><span data-fr>Leadership</span></div>
+    <h2 class="section-title reveal"><span data-en>The team behind the initiative</span><span data-fr>L'équipe derrière l'initiative</span></h2>
+    <p class="section-body reveal"><span data-en>Practitioners with decades of combined experience, united by a commitment to ethical, impactful AI.</span><span data-fr>Des praticiens avec des décennies d'expérience combinée, unis par un engagement envers une IA éthique et impactante.</span></p>
     <div class="board-grid stagger-children reveal">
 
       <a href="https://www.linkedin.com/in/farid-bellameche-6606332/" target="_blank" rel="noopener noreferrer" class="board-card">
@@ -866,8 +880,8 @@
           </div>
         </div>
         <div class="board-name">Farid <img src="./assets/ln.png" alt="LinkedIn" class="ln-icon" /></div>
-        <div class="board-title">President · generative.build</div>
-        <p class="board-bio">30 years in tech, 15 AI keynotes. Helps organizations navigate the AI landscape with clarity and strategic intent.</p>
+        <div class="board-title"><span data-en>President</span><span data-fr>Président</span> · generative.build</div>
+        <p class="board-bio"><span data-en>30 years in tech, 15 AI keynotes. Helps organizations navigate the AI landscape with clarity and strategic intent.</span><span data-fr>30 ans dans la tech, 15 conférences (keynotes) sur l'IA. Aide les organisations à naviguer dans le paysage de l'IA avec clarté et intention stratégique.</span></p>
       </a>
 
       <a href="https://www.linkedin.com/in/rebekacohensolal/" target="_blank" rel="noopener noreferrer" class="board-card">
@@ -877,8 +891,8 @@
           </div>
         </div>
         <div class="board-name">Rebeka Cohen-Solal <img src="./assets/ln.png" alt="LinkedIn" class="ln-icon" /></div>
-        <div class="board-title">Board Member · MBA</div>
-        <p class="board-bio">GTM strategist and executive coach specializing in global market entry, strategic partnerships, and tech sales leadership.</p>
+        <div class="board-title"><span data-en>Board Member</span><span data-fr>Membre du Conseil</span> · MBA</div>
+        <p class="board-bio"><span data-en>GTM strategist and executive coach specializing in global market entry, strategic partnerships, and tech sales leadership.</span><span data-fr>Stratège GTM et coach exécutive spécialisée dans l'entrée sur les marchés mondiaux, les partenariats stratégiques et le leadership des ventes technologiques.</span></p>
       </a>
 
       <a href="https://www.linkedin.com/in/renejf/" target="_blank" rel="noopener noreferrer" class="board-card">
@@ -888,8 +902,8 @@
           </div>
         </div>
         <div class="board-name">JF René <img src="./assets/ln.png" alt="LinkedIn" class="ln-icon" /></div>
-        <div class="board-title">Board Member</div>
-        <p class="board-bio">Former CTO at ScalePad. Founder and platform engineering leader helping businesses scale operations with AI systems.</p>
+        <div class="board-title"><span data-en>Board Member</span><span data-fr>Membre du Conseil</span></div>
+        <p class="board-bio"><span data-en>Former CTO at ScalePad. Founder and platform engineering leader helping businesses scale operations with AI systems.</span><span data-fr>Ancien CTO chez ScalePad. Fondateur et leader en ingénierie de plateformes aidant les entreprises à faire évoluer leurs opérations avec des systèmes d'IA.</span></p>
       </a>
 
     </div>
@@ -901,33 +915,33 @@
 <!-- ROADMAP -->
 <section id="roadmap">
   <div class="container">
-    <div class="section-eyebrow reveal">What's Next</div>
-    <h2 class="section-title reveal">Building toward open infrastructure</h2>
-    <p class="section-body reveal">The community is growing. So is the platform that supports it.</p>
+    <div class="section-eyebrow reveal"><span data-en>What's Next</span><span data-fr>À Venir</span></div>
+    <h2 class="section-title reveal"><span data-en>Building toward open infrastructure</span><span data-fr>Vers une infrastructure ouverte</span></h2>
+    <p class="section-body reveal"><span data-en>The community is growing. So is the platform that supports it.</span><span data-fr>La communauté grandit. Tout comme la plateforme qui la soutient.</span></p>
     <div class="roadmap-list reveal">
       <div class="roadmap-item">
         <div class="roadmap-num">01</div>
         <div class="roadmap-content">
-          <div class="roadmap-title">Live Event Streaming</div>
-          <p class="roadmap-desc">Watch our speaker events live, wherever you are — no ticket required.</p>
+          <div class="roadmap-title"><span data-en>Live Event Streaming</span><span data-fr>Diffusion d'Événements en Direct</span></div>
+          <p class="roadmap-desc"><span data-en>Watch our speaker events live, wherever you are — no ticket required.</span><span data-fr>Regardez nos événements en direct, où que vous soyez — aucun billet requis.</span></p>
         </div>
-        <div class="roadmap-badge">In progress</div>
+        <div class="roadmap-badge"><span data-en>In progress</span><span data-fr>En cours</span></div>
       </div>
       <div class="roadmap-item">
         <div class="roadmap-num">02</div>
         <div class="roadmap-content">
-          <div class="roadmap-title">Online Events</div>
-          <p class="roadmap-desc">Extending the community beyond Montréal with fully virtual speaker sessions and workshops.</p>
+          <div class="roadmap-title"><span data-en>Online Events</span><span data-fr>Événements en Ligne</span></div>
+          <p class="roadmap-desc"><span data-en>Extending the community beyond Montréal with fully virtual speaker sessions and workshops.</span><span data-fr>Étendre la communauté au-delà de Montréal avec des sessions de conférenciers et des ateliers entièrement virtuels.</span></p>
         </div>
-        <div class="roadmap-badge">Coming soon</div>
+        <div class="roadmap-badge"><span data-en>Coming soon</span><span data-fr>Bientôt disponible</span></div>
       </div>
       <div class="roadmap-item">
         <div class="roadmap-num">03</div>
         <div class="roadmap-content">
-          <div class="roadmap-title">Community Hub</div>
-          <p class="roadmap-desc">A dedicated space for async discussion, resource sharing, and collaboration between members.</p>
+          <div class="roadmap-title"><span data-en>Community Hub</span><span data-fr>Hub Communautaire</span></div>
+          <p class="roadmap-desc"><span data-en>A dedicated space for async discussion, resource sharing, and collaboration between members.</span><span data-fr>Un espace dédié pour les discussions asynchrones, le partage de ressources et la collaboration entre les membres.</span></p>
         </div>
-        <div class="roadmap-badge">Planned</div>
+        <div class="roadmap-badge"><span data-en>Planned</span><span data-fr>Planifié</span></div>
       </div>
     </div>
   </div>
@@ -939,13 +953,13 @@
     <div class="footer-inner">
       <div class="footer-logo">
         <img src="./assets/logo-shape.png" alt="generative.build"/>
-        <span class="footer-copy">© 2025 Generative Build Foundation</span>
+        <span class="footer-copy"><span data-en>© 2025 Generative Build Foundation</span><span data-fr>© 2025 Fondation Generative Build</span></span>
       </div>
       <div class="footer-links">
-        <a href="#mission">Mission</a>
-        <a href="#values">Values</a>
-        <a href="#speakers">Speakers</a>
-        <a href="#board">Team</a>
+        <a href="#mission"><span data-en>Mission</span><span data-fr>Mission</span></a>
+        <a href="#values"><span data-en>Values</span><span data-fr>Valeurs</span></a>
+        <a href="#speakers"><span data-en>Speakers</span><span data-fr>Conférenciers</span></a>
+        <a href="#board"><span data-en>Team</span><span data-fr>Équipe</span></a>
       </div>
     </div>
   </div>
@@ -1001,6 +1015,16 @@
   }, { threshold: 0.4 });
 
   document.querySelectorAll('.stat-card').forEach(el => statsObserver.observe(el));
+
+  // ── Language Toggle
+  const langToggle = document.getElementById('lang-toggle');
+  let currentLang = 'en';
+
+  langToggle.addEventListener('click', () => {
+    currentLang = currentLang === 'en' ? 'fr' : 'en';
+    document.documentElement.lang = currentLang;
+    langToggle.textContent = currentLang === 'en' ? 'FR' : 'EN';
+  });
 </script>
 </body>
 </html>
