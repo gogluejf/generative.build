@@ -91,6 +91,15 @@
   }
   .nav-btn-lang:hover { background: rgba(255,255,255,0.1); }
   
+  .nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+    padding: 4px;
+  }
+  
   /* ── SECTION SCAFFOLDING ── */
   section { padding: 100px 0; }
   .container { max-width: 1060px; margin: 0 auto; padding: 0 32px; }
@@ -573,7 +582,15 @@
   /* ═══════════════════════════════════ RESPONSIVE ═══════════════════════════════════ */
   @media (max-width: 768px) {
     nav { padding: 16px 24px; }
-    .nav-links { display: none; }
+    .nav-toggle { display: block; }
+    .nav-links {
+      position: absolute; top: 100%; left: 0; right: 0;
+      background: rgba(19,22,27,0.95); backdrop-filter: blur(20px);
+      flex-direction: column; padding: 24px; gap: 24px;
+      border-bottom: 1px solid var(--border-bright);
+      display: none;
+    }
+    .nav-links.active { display: flex; }
     .mission-layout { grid-template-columns: 1fr; gap: 40px; }
     .values-grid { grid-template-columns: 1fr; }
     .stats-grid { grid-template-columns: repeat(2, 1fr); }
@@ -634,7 +651,7 @@
   <a href="#" class="nav-logo">
     <img src="./assets/logo-dark.png" alt="generative.build"/>
   </a>
-  <div class="nav-links">
+  <div class="nav-links" id="nav-links">
     <a href="#mission"><span data-en>Mission</span><span data-fr>Mission</span></a>
     <a href="#values"><span data-en>Values</span><span data-fr>Valeurs</span></a>
     <a href="#speakers"><span data-en>Speakers</span><span data-fr>Conférenciers</span></a>
@@ -643,6 +660,13 @@
     <a href="mailto:faridautomatic@gmail.com" class="nav-cta"><span data-en>Join Us</span><span data-fr>Rejoignez-nous</span></a>
     <button id="lang-toggle" class="nav-btn-lang">FR</button>
   </div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </button>
 </nav>
 
 <!-- HERO -->
@@ -1049,6 +1073,28 @@
     currentLang = currentLang === 'en' ? 'fr' : 'en';
     document.documentElement.lang = currentLang;
     langToggle.textContent = currentLang === 'en' ? 'FR' : 'EN';
+  });
+
+  // ── Mobile Nav Toggle
+  const navToggle = document.getElementById('nav-toggle');
+  const navLinks = document.getElementById('nav-links');
+  
+  navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+
+  // Close nav on click
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+    });
+  });
+
+  // Close nav on click outside
+  document.addEventListener('click', (event) => {
+    if (navLinks.classList.contains('active') && !navToggle.contains(event.target) && !navLinks.contains(event.target)) {
+      navLinks.classList.remove('active');
+    }
   });
 </script>
 </body>
