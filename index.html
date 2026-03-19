@@ -518,6 +518,30 @@
   .ln-icon { width: 16px; height: 16px; opacity: 0.6; transition: opacity .2s, transform .2s; }
   .speaker-card:hover .ln-icon, .board-card:hover .ln-icon { opacity: 1; transform: scale(1.1); }
 
+  /* ── SPEAKER CTA ── */
+  .speaker-cta {
+    margin-top: 60px;
+    background: var(--surface);
+    border: 1px solid var(--border-bright);
+    border-radius: 14px;
+    padding: 48px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .speaker-cta::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--teal), var(--coral));
+  }
+  .speaker-cta h3 {
+    font-family: var(--font-display); font-size: clamp(20px, 2.5vw, 24px); font-weight: 800;
+    color: var(--white); margin-bottom: 12px; letter-spacing: -0.01em;
+  }
+  .speaker-cta p {
+    color: var(--muted); font-size: 16px; line-height: 1.6; max-width: 640px;
+    margin: 0 auto 32px;
+  }
+
   /* ═══════════════════════════════════ ROADMAP ═══════════════════════════════════ */
   #roadmap { padding: 100px 0; background: var(--surface3); position: relative; }
   #roadmap::before {
@@ -681,12 +705,12 @@
         <span class="pulse-dot"></span> <span data-en>Montreal · Community · Non-Profit</span><span data-fr>Montréal · Communauté · OBNL</span>
       </div>
       <h1 class="hero-title">
-        <span data-en>Where <em>Builders</em><br/>Shape the <span class="accent">AI</span> Era</span>
-        <span data-fr>Où les <em>Bâtisseurs</em><br/>Façonnent l'Ère de <span class="accent">l'IA</span></span>
+        <span data-en>We Are the <em>Builders</em><br/>Shaping the <span class="accent">AI</span> Era</span>
+        <span data-fr>Nous Sommes les <em>Bâtisseurs</em><br/>Qui Façonnent l'Ère de <span class="accent">l'IA</span></span>
       </h1>
       <p class="hero-sub">
-        <span data-en>A non-profit community of engineers, founders, and practitioners building AI that creates genuine value — for people, organizations, and society.</span>
-        <span data-fr>Une communauté à but non lucratif d'ingénieurs, de fondateurs et de praticiens construisant une IA qui crée une véritable valeur — pour les individus, les organisations et la société.</span>
+        <span data-en>We care about the future, so we organize to build it. A non-profit community of engineers, founders, and practitioners shipping AI that creates genuine, human-centric value.</span>
+        <span data-fr>L'avenir nous tient à cœur, alors nous nous organisons pour le bâtir. Une communauté à but non lucratif d'ingénieurs et de fondateurs développant une IA qui crée une véritable valeur humaine.</span>
       </p>
       <div class="hero-actions">
         <a href="#mission" class="btn-primary"><span data-en>Explore our mission</span><span data-fr>Découvrir notre mission</span></a>
@@ -706,12 +730,16 @@
       <div>
         <div class="section-eyebrow"><span data-en>Our Mission</span><span data-fr>Notre Mission</span></div>
         <h2 class="mission-statement">
-          <span data-en>A community of builders creating AI that generates <span class="hl">real value</span> for people, organizations and society.</span>
-          <span data-fr>Une communauté de bâtisseurs créant une IA qui génère une <span class="hl">valeur réelle</span> pour les personnes, les organisations et la société.</span>
+          <span data-en>A community of builders creating AI that generates <span class="hl">real outcome</span> for people, organizations and society.</span>
+          <span data-fr>Une communauté de bâtisseurs créant une IA qui génère des <span class="hl">résultats réels</span> pour les personnes, les organisations et la société.</span>
         </h2>
       </div>
       <div class="mission-right">
         <div class="mission-tag"><span data-en>NPO · Montréal</span><span data-fr>OBNL · Montréal</span></div>
+        <h3 style="color: var(--white); font-family: var(--font-display); font-size: 20px; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.01em;">
+          <span data-en>We don't hype, we just build.</span>
+          <span data-fr>On ne fait pas de hype, on bâtit.</span>
+        </h3>
         <p>
           <span data-en>generative.build is not a conference series or a Slack group. It's an operating system for the builders who believe AI must earn its place through impact — not hype.</span>
           <span data-fr>generative.build n'est pas une série de conférences ou un groupe Slack. C'est un système d'exploitation pour les bâtisseurs qui croient que l'IA doit gagner sa place par son impact — et non par le battage médiatique (hype).</span>
@@ -732,8 +760,8 @@
 <section id="values">
   <div class="container">
     <div class="section-eyebrow reveal"><span data-en>Core Values</span><span data-fr>Valeurs Fondamentales</span></div>
-    <h2 class="section-title reveal"><span data-en>What we stand for</span><span data-fr>Ce que nous défendons</span></h2>
-    <p class="section-body reveal"><span data-en>Four principles that govern every decision, event, and collaboration in this community.</span><span data-fr>Quatre principes qui régissent chaque décision, événement et collaboration au sein de cette communauté.</span></p>
+    <h2 class="section-title reveal"><span data-en>The rules of our success</span><span data-fr>Les règles de notre succès</span></h2>
+    <p class="section-body reveal"><span data-en>No fluff, no compromises. The four pillars that drive our community and shape how we build together.</span><span data-fr>Sans artifice, sans compromis. Les quatre piliers qui propulsent notre communauté et façonnent notre façon de bâtir ensemble.</span></p>
     <div class="values-grid stagger-children reveal">
       <div class="value-card">
         <div class="value-icon"><img src="./assets/human.png" alt="Human at the Core" /></div>
@@ -909,6 +937,18 @@
       </a>
 
     </div>
+    
+    <div class="speaker-cta reveal">
+      <h3>
+        <span data-en>Are you a builder with proven, real-world impact?</span>
+        <span data-fr>Êtes-vous un bâtisseur avec un impact réel et prouvé ?</span>
+      </h3>
+      <p>
+        <span data-en>Do you ship early and build with conviction? We want to hear from you. Join us as a speaker at an upcoming event.</span>
+        <span data-fr>Vous livrez tôt et bâtissez avec conviction ? Nous voulons vous entendre. Rejoignez-nous comme conférencier lors d'un prochain événement.</span>
+      </p>
+      <a href="mailto:faridautomatic@gmail.com" class="btn-primary"><span data-en>Become a Speaker</span><span data-fr>Devenir Conférencier</span></a>
+    </div>
   </div>
 </section>
 
@@ -993,6 +1033,19 @@
         <div class="roadmap-badge"><span data-en>Planned</span><span data-fr>Planifié</span></div>
       </div>
     </div>
+    
+    <div class="speaker-cta reveal">
+      <h3>
+        <span data-en>We build stronger together.</span>
+        <span data-fr>Nous bâtissons plus fort ensemble.</span>
+      </h3>
+      <p>
+        <span data-en>Is there an initiative or platform feature you would like to see the community launch next? We are listening.</span>
+        <span data-fr>Y a-t-il une initiative ou une fonctionnalité que vous aimeriez voir la communauté lancer prochainement ? Nous sommes à l'écoute.</span>
+      </p>
+      <a href="mailto:faridautomatic@gmail.com" class="btn-primary"><span data-en>Share an Idea</span><span data-fr>Partager une Idée</span></a>
+    </div>
+
   </div>
 </section>
 
