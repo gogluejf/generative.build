@@ -637,16 +637,11 @@
   }
   .footer-links { display: flex; gap: 24px; }
   .footer-links a {
-    font-family: var(--font-mono); font-size: 11px;
+    font-family: var(--font-mono); font-size: 11px; color: var(--muted);
     text-decoration: none; letter-spacing: 0.08em; text-transform: uppercase;
-    transition: opacity .2s, filter .2s;
-    opacity: 0.7;
+    transition: color .2s;
   }
-  .footer-links a:hover { opacity: 1; filter: brightness(1.2); }
-  .footer-links a:nth-child(4n+1) { color: var(--teal); }
-  .footer-links a:nth-child(4n+2) { color: var(--coral); }
-  .footer-links a:nth-child(4n+3) { color: var(--amber); }
-  .footer-links a:nth-child(4n+4) { color: #a78bfa; }
+  .footer-links a:hover { color: var(--teal); }
 
   /* ═══════════════════════════════════ PHOTO PLACEHOLDER TOOLTIP ═══════════════════════════════════ */
   .avatar-wrap { position: relative; }
