@@ -59,7 +59,7 @@
     display: flex; align-items: center; gap: 12px;
     text-decoration: none;
   }
-  .nav-logo img { height: 52px; }
+  .nav-logo img { height: 48px; }
   .nav-links { display: flex; align-items: center; gap: 32px; }
   .nav-links a {
     color: var(--muted); font-size: 15px; font-weight: 500;
@@ -637,11 +637,16 @@
   }
   .footer-links { display: flex; gap: 24px; }
   .footer-links a {
-    font-family: var(--font-mono); font-size: 11px; color: var(--muted);
+    font-family: var(--font-mono); font-size: 11px;
     text-decoration: none; letter-spacing: 0.08em; text-transform: uppercase;
-    transition: color .2s;
+    transition: opacity .2s, filter .2s;
+    opacity: 0.7;
   }
-  .footer-links a:hover { color: var(--teal); }
+  .footer-links a:hover { opacity: 1; filter: brightness(1.2); }
+  .footer-links a:nth-child(4n+1) { color: var(--teal); }
+  .footer-links a:nth-child(4n+2) { color: var(--coral); }
+  .footer-links a:nth-child(4n+3) { color: var(--amber); }
+  .footer-links a:nth-child(4n+4) { color: #a78bfa; }
 
   /* ═══════════════════════════════════ PHOTO PLACEHOLDER TOOLTIP ═══════════════════════════════════ */
   .avatar-wrap { position: relative; }
@@ -710,3 +715,4 @@
   }
   .stat-card { position: relative; }
   .stat-card.counted .count-bar { width: 100%; }
+
